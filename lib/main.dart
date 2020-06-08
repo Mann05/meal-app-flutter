@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './screens/categories.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -11,32 +13,21 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.amber,
+        accentColor: Colors.teal,
         visualDensity: VisualDensity.adaptivePlatformDensity,
+        textTheme: ThemeData.light().textTheme.copyWith(
+          headline4: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold
+          ),
+          headline5:TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.bold
+          )
+        )
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-          child: Text('MEAL APP')),
+      home: CategoriesScreen(),
     );
   }
 }
