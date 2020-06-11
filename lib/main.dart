@@ -20,9 +20,10 @@ class MyApp extends StatelessWidget {
           textTheme: ThemeData.light().textTheme.copyWith(
               headline4: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               headline5: TextStyle(fontSize: 16, fontWeight: FontWeight.bold))),
-      home: CategoriesScreen(),
+      //home: CategoriesScreen(),
       routes: {
-        '/category-meals': (ctx) => CategoryMealScreen(),
+        '/' : (ctx)=> CategoriesScreen(), // treated as home
+        CategoryMealScreen.routeName: (ctx) => CategoryMealScreen(),
       },
     );
   }

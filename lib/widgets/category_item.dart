@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meals/screens/categoryMeals.dart';
 import '../models/categoryModel.dart';
 
 class CategoryItem extends StatelessWidget {
@@ -10,7 +11,7 @@ class CategoryItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.of(context).pushNamed('/category-meals',
+        Navigator.of(context).pushNamed(CategoryMealScreen.routeName,
             arguments: {'id': category.id, 'title': category.categoryTitle});
       },
       splashColor: Theme.of(context).primaryColor,
