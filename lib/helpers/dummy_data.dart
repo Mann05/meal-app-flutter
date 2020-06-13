@@ -53,8 +53,6 @@ const dummy_Data = const [
   ),
 ];
 
-
-
 const DUMMY_MealS = const [
   MealModel(
     id: 'm1',

@@ -11,8 +11,13 @@ class CategoryItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.of(context).pushNamed(CategoryMealScreen.routeName,
-            arguments: {'id': category.id, 'title': category.categoryTitle});
+        Navigator.of(context).pushNamed(
+          CategoryMealScreen.routeName,
+          arguments: {
+            'id': category.id,
+            'title': category.categoryTitle,
+          },
+        );
       },
       splashColor: Theme.of(context).primaryColor,
       borderRadius: BorderRadius.circular(15),
