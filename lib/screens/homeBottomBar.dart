@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/drawer_main.dart';
 import './favoriteScreen.dart';
 import './categories.dart';
 
@@ -27,6 +28,7 @@ class _HomeBottomBarScreenState extends State<HomeBottomBarScreen> {
       appBar: AppBar(
         title: Text(_pages[_selectedPageIndex]['title']),
       ),
+      drawer: MainDrawer(),
       body: _pages[_selectedPageIndex]['key'],
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectPage,
