@@ -4,8 +4,11 @@ import '../models/mealModel.dart';
 
 class MealItem extends StatelessWidget {
   final MealModel item;
-  final Function removedItem;
-  MealItem({this.item, @required this.removedItem});
+  // final Function removedItem;
+  MealItem({
+    this.item,
+    // @required this.removedItem,
+  });
 
   void selectItem(BuildContext context) {
     Navigator.of(context)
@@ -15,7 +18,7 @@ class MealItem extends StatelessWidget {
     )
         .then((value) {
       if (value != null) {
-        removedItem(value);
+        // removedItem(value);
       }
     });
   }

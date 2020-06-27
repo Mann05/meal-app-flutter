@@ -29,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         body: TabBarView(children: [
           CategoriesScreen(),
-          FavoriteScreen(),
+          //FavoriteScreen(),
         ]),
       ),
     );
